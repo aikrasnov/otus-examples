@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "streams.py", line 8, in <module>
+    raise RuntimeError("I am in stderr")
+RuntimeError: I am in stderr
