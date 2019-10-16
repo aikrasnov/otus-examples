@@ -13,12 +13,13 @@ class Flash(Button):
    html = "<obj></obj>"
 
 class ButtonFactory():
-   def create_button(self, typ):
-      targetclass = typ.capitalize()
-      return globals()[targetclass]()
+   def create_button(self, _type):
+      # targetclass = typ.capitalize()
+      # return globals()[targetclass]()
+      return _type()
 
 button_obj = ButtonFactory()
-button = ['image', 'input', 'flash']
+button = [Button, Input, Flash]
 for b in button:
    print(button_obj.create_button(b).get_html())
 

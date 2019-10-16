@@ -1,5 +1,6 @@
 import pytest
 import typing
+from typing import TypeVar
 from selenium.webdriver import Remote
 
 
@@ -27,10 +28,10 @@ class SimpleTestClass:
         return page_class()
 
     def foo_test(self, driver):
-        driver.save_screenshot()
+        driver.save_schreenshis()
 
     def foo_test_typed(self, driver: Remote):
-        driver.get("foobar")
+        driver.get_screenshot_as_file('')
 
     def page_factory_example_test(self):
         page_foo = self.page_factory(FooPage)

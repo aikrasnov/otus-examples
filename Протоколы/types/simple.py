@@ -23,5 +23,5 @@ typed_type_broken_1 = get_string_length_typed(123)
 typed_type_broken_2 = get_string_length_typed(defaultdict)
 
 
-def get_bar_of_foo_typed(foo_instance: Foo) -> int:
-    return foo_instance.bar
+def get_bar_of_foo_typed(bar: Foo) -> int:
+    return bar.bar
