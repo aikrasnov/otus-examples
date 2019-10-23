@@ -3,8 +3,6 @@ import copy
 import time
 
 env_copy = copy.deepcopy(os.environ)
-env_copy.pop("GOQA_TESTRAIL_LOGIN", None)
-env_copy.pop("GOQA_TESTRAIL_PASSWORD", None)
 
 print(env_copy)
 
