@@ -5,4 +5,4 @@ print("\n#######")
 print("Hello otus!")
 print("#######\n")
 
-raise RuntimeError("I am in stderr")
+# raise RuntimeError("I am in stderr")
