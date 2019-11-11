@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    stages {
+        stage("tests") {
+            steps {
+                sh '''
+                 rm -rf python-selenium
+                 git clone https://github.com/aikrasnov/python-selenium
+                 cd python-selenium
+                 pip install pipenv
+                 pipenv install --ignore-pipfile
+                 pipenv run pytest --alluredir=allure-results -n auto -m debug
+                '''
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                allure ([
+                includeProperties: false,
+                jdk: '',
+                reportBuildPolicy: 'ALWAYS',
+                results: [[path: 'python-selenium/allure-results']]])
+            }
+        }
+    }
+}
