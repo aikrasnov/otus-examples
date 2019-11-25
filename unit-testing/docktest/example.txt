@@ -1,0 +1,15 @@
+The ``sys`` module
+======================
+
+Using ``sys``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``platform`` from the ``sys`` module:
+
+    >>> from sys import platform
+
+Now use it:
+
+    >>> platform
+    'darwin'

@@ -1,0 +1,15 @@
+The ``doctest_otus`` module
+======================
+
+Using ``factorial``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``factorial`` from the ``doctest_otus`` module:
+
+    >>> from docktest_otus import factorial
+
+Now use it:
+
+    >>> factorial(6)
+    720
