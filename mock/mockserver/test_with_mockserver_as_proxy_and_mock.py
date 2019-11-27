@@ -15,24 +15,24 @@ def driver():
     driver.quit()
 
 
-# def test_literal_answer(driver):
-#     requests.put("http://localhost:1080/mockserver/expectation", json={
-#         "httpRequest": {
-#             "path": "/"
-#         },
-#         "httpResponse": {
-#             "body": "Hello from MockServer!"
-#         }
-#     })
-#
-#     # Пояснить откуда взялся домен testapp
-#     driver.get("http://testapp:8080")
-#     # wait until we done here
-#     try:
-#         while True:
-#             pass
-#     except KeyboardInterrupt:
-#         pass
+def test_literal_answer(driver):
+    requests.put("http://localhost:1080/mockserver/expectation", json={
+        "httpRequest": {
+            "path": "/"
+        },
+        "httpResponse": {
+            "body": "Hello from MockServer!"
+        }
+    })
+
+    # Пояснить откуда взялся домен testapp
+    driver.get("http://testapp:8080")
+    # wait until we done here
+    try:
+        while True:
+            pass
+    except KeyboardInterrupt:
+        pass
 
 def test_update_by_template(driver):
     requests.put("http://localhost:1080/mockserver/expectation", json={
