@@ -13,7 +13,7 @@ def mock():
         yield mock_instance
 
 
-def test_foo(mock):
+def test_foo():
     # https://requests-mock.readthedocs.io/en/latest/matching.html
     mock.get("https://ya.ru", status_code = 500)
     response = foo()
