@@ -19,6 +19,7 @@ class SftpClient:
     @classmethod
     def create_connection(cls, host, port, username, password):
 
+        # noinspection PyTypeChecker
         transport = Transport(sock=(host, port))
         transport.connect(username=username, password=password)
         cls._connection = SFTPClient.from_transport(transport)
@@ -59,10 +60,10 @@ class SftpClient:
         self._connection.close()
 
 if __name__ == '__main__':
-    host = 'secret.domain'
+    host = '0.0.0.0'
     port = 22
-    username = 'admin'
-    password = 'admin'
+    username = 'foo'
+    password = 'bar'
 
     download_remote_path = '.bashrc'
     download_local_path = 'download.txt'

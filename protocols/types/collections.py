@@ -11,3 +11,4 @@ typed_dict: Dict[str, int] = {"bar": 1}
 typed_dict_error: Dict[str, int] = {1: 1}
 
 tuple_of_foo: Tuple[Foo, Foo, list] = (Foo(), Foo(), [])
+tuple_of_foo: Tuple[int, int] = (1, 2)

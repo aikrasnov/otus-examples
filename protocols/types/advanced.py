@@ -19,6 +19,8 @@ sad_bar.awesome_method() # Показать, что автокомплит не 
 # не забыть показать type info awesome_bar
 awesome_bar = factory_typed(Bar)
 awesome_bar.awesome_method()
+awesome_bar.bar()
+awesome_bar.awesome_method()
 
 
 class ReturnSelf:

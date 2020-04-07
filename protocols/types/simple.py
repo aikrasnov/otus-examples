@@ -22,6 +22,7 @@ typed_type = get_string_length_typed("foo_bar")
 typed_type_broken_1 = get_string_length_typed(123)
 typed_type_broken_2 = get_string_length_typed(defaultdict)
 
-
+# int, str, list, tuple, dict,
+# def get_bar_of_foo_typed(bar: Foo()) -> int:
 def get_bar_of_foo_typed(bar: Foo) -> int:
     return bar.bar
