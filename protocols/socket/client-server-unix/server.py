@@ -12,6 +12,8 @@ server.bind(SOCKET_FILE)
 
 print("Слушаем...")
 while True:
+    import time
+    time.sleep(10)
     datagram = server.recv(1024)
     if not datagram:
         break

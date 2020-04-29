@@ -4,17 +4,18 @@ import time
 
 counter = 0
 
+
 async def handle_echo(reader, writer):
     global counter
     counter += 1
     local_counter = counter
-    randint = random.randint(1, 30)
+    randint = random.randint(1, 10)
     time.sleep(randint)
-    # await asyncio.sleep(randint)
-    data = await reader.read(1024)
-    message = data.decode()
-    addr = writer.get_extra_info("peername")
-    print(f"Получено {message} от {addr}, спал {randint}")
+    await asyncio.sleep(randint)
+    # data = await reader.read(1024)
+    # message = data.decode()
+    # addr = writer.get_extra_info("peername")
+    # print(f"Получено {message} от {addr}, спал {randint}")
     print(f"Когда я уснул было {local_counter}, когда проснулся {counter}")
     writer.close()
 

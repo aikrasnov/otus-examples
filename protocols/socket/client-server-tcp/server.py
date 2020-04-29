@@ -25,7 +25,7 @@ print('Соединение:', addr)
 while True:
     data = conn.recv(1024)
     if not data:
-        print(data)
+        print("That's all")
         break
     conn.send(data.upper())
 

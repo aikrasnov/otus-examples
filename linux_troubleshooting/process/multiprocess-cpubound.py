@@ -1,12 +1,12 @@
 from multiprocessing import Pool
 import time
 
+
 foo = []
 
 
 def millis():
     return int(round(time.time() * 1000))
-
 
 # noinspection PyShadowingNames
 def calculate(_):
@@ -16,14 +16,14 @@ def calculate(_):
     print(f"Took {str(millis() - start_time)} ms")
 
 
-bar = [1, 2, 3, 4, 5]
+bar = list(range(1000))
 
-pool = Pool(processes=5)
+pool = Pool(processes=10)
 
 start_time = millis()
 results = pool.map(calculate, bar)
 
-print(f"Total took {str(millis() - start_time)}ms in 5 processes")
+print(f"Total took {str(millis() - start_time)}ms in 10 processes")
 
 # for result in results:
 #     print(result.status_code)

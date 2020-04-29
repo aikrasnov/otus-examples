@@ -10,3 +10,4 @@ print("This line goes to test.txt")
 
 sys.stdout = save_stdout
 fd.close()
+print("done")

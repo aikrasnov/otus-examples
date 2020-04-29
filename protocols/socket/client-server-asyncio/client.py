@@ -2,7 +2,7 @@ import socket
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('num', action='store', help='Path to logfile')
+parser.add_argument('num', action='store')
 args = parser.parse_args()
 
 sock = socket.create_connection(("127.0.0.1", 10001))

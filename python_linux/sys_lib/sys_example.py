@@ -1,14 +1,21 @@
 import sys
 
-print(sys.argv)
-print(sys.executable)
-print(sys.path)
+print("argv: ", sys.argv)
+print("executable", sys.executable)
+print("path: ", sys.path)
+print('\n\n\n')
+
 sys.path.append("/path/to/my/module")
-print(sys.path)
-print(sys.platform)
-os = sys.platform
-if os == "win32":
+print('\n\n\n')
+print("updated path", sys.path)
+print('\n\n\n')
+
+print("platform: ", sys.platform)
+
+
+if sys.platform == "win32":
     pass
-elif os.startswith('linux'):
+elif sys.platform.startswith('linux'):
     pass
+
 sys.exit(0)
