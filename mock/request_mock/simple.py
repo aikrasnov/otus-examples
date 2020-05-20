@@ -15,7 +15,7 @@ def mock():
 
 def test_foo():
     # https://requests-mock.readthedocs.io/en/latest/matching.html
-    mock.get("https://ya.ru", status_code = 500)
+    # mock.get("https://ya.ru", status_code = 500)
+    # mock.post("https://go.mail.ru", status_code=400)
     response = foo()
-    # print(response.status_code)
     assert response.status_code == 500

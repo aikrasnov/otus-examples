@@ -9,7 +9,8 @@ def foo():
     try:
         return bar()
     except TypeError:
-        print("TypeError occurs")
+        print("\n\nTypeError occurs\n\n")
+
 
 def test_function():
     with patch('side_effects_errors.bar', side_effect=TypeError):

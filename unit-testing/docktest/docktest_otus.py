@@ -7,7 +7,7 @@ The example module supplies one function, factorial().  For example,
 720
 """
 
-# Не забыть показать python -m doctest -v example.py
+# Не забыть показать python -m doctest -v docktest_otus.py
 def factorial(n):
     """Return the factorial of n, an exact integer >= 0.
 

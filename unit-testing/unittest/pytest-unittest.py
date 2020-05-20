@@ -22,7 +22,7 @@ class MyTest(unittest.TestCase):
     def test_method1(self):
         print(self.foo)
         assert hasattr(self, "db")
-        assert 1, self.db   # fail for demo purposes
+        assert 0, self.db   # fail for demo purposes
 
     def test_method2(self):
-        assert 1, self.db   # fail for demo purposes
+        assert 0, self.db   # fail for demo purposes

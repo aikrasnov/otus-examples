@@ -6,5 +6,6 @@ def foo():
 
 
 def test_function():
-    with patch('builtins.input', side_effect=("expected_one", "expected_two", "expected_three")):
+    with patch('builtins.input', side_effect=("expected_one", "expected_two", "expected_three", "expected_four")):
         assert foo() == ("expected_one", "expected_two", "expected_three")
+        assert input() == "expected_four"

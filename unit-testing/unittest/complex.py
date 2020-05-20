@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
     def test_nothing(self):
         self.fail("shouldn't happen")
 
-    @unittest.skipIf(foo.__version__ < 3,
+    @unittest.skipIf(foo.__version__ < 1,
                      "not supported in this library version")
     def test_format(self):
         # Tests that work for only a certain version of the library.
@@ -37,7 +37,7 @@ class ExpectedFailureTestCase(unittest.TestCase):
         self.assertEqual(1, 0, "broken")
 
 
-def skipUnlessHasattr(obj, attr):
-    if hasattr(obj, attr):
-        return lambda func: func
-    return unittest.skip("{!r} doesn't have {!r}".format(obj, attr))
+# def skipUnlessHasattr(obj, attr):
+#     if hasattr(obj, attr):
+#         return lambda func: func
+#     return unittest.skip("{!r} doesn't have {!r}".format(obj, attr))

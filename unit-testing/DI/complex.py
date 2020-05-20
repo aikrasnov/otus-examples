@@ -1,4 +1,5 @@
 # Импортируем единственный модуль.
+# https://pypi.org/project/Inject/
 # noinspection PyUnresolvedReferences
 import inject
 
