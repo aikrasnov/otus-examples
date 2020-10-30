@@ -1,7 +1,7 @@
 import pytest
 import typing
 from typing import TypeVar
-from selenium.webdriver import Remote
+from webui.webdriver import Remote
 
 
 class FooPage:

@@ -1,4 +1,4 @@
-from selenium.webdriver import Chrome
+from webui.webdriver import Chrome
 
 
 driver = Chrome()

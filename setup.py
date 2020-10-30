@@ -8,7 +8,8 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="example-pkg-akrasnov-test", # Replace with your own username
     platforms="linux",
-    version="0.0.4",
+    # Рассказать про семвер
+    version="0.0.7",
     author="Example Author",
     author_email="author@example.com",
     description="A small example package",
@@ -31,10 +32,16 @@ setuptools.setup(
 # sdist -- source distribution
 # python -m pip install --upgrade setuptools wheel
 # Не забыть показать help
+# python setup.py --help-commands
+# https://stackoverflow.com/questions/6292652/what-is-the-difference-between-an-sdist-tar-gz-distribution-and-an-python-egg
+# setup.py sdist creates a source distribution: it contains setup.py, the source files of your module/script (.py files or .c/.cpp for binary modules), your data files, etc. The result is an archive that can then be used to recompile everything on any platform.
+# setup.py bdist (and bdist_*) creates a built distribution: it includes .pyc files, .so/.dll/.dylib for binary modules, .exe
 # python setup.py sdist bdist_wheel
+# Показать без __init__.py
 # python setup.py build
 # https://test.pypi.org/account/register/
 # https://test.pypi.org/manage/account/#api-tokens
+# https://pypi.org/project/twine/
 # python -m pip install --user --upgrade twine
 # python -m twine upload --repository testpypi dist/*
 # https://test.pypi.org/project/example-pkg-YOUR-USERNAME-HERE/

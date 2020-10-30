@@ -1,7 +1,7 @@
 import pytest
 import time
 import requests
-from selenium.webdriver import Chrome, ChromeOptions
+from webui.webdriver import Chrome, ChromeOptions
 
 # python simple_server
 # mockserver -serverPort 1080
