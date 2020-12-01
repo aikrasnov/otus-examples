@@ -2,7 +2,7 @@ import argparse
 import re
 import json
 from collections import defaultdict
-# from collections import Counter, deque TODO: не забыть упомянуть
+# from collections import Counter TODO: не забыть упомянуть
 
 
 parser = argparse.ArgumentParser(description='Process access.log')
@@ -24,4 +24,5 @@ with open(args.file) as file:
         if index > 99:
             break
 
-print(json.dumps(dict_ip, indent=4))
+print(dict_ip)
+# print(json.dumps(dict_ip, indent=4))

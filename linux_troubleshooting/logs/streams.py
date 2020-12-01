@@ -1,4 +1,5 @@
 foo = input()
+
 print(f"\n{foo} from stdin!")
 
 print("\n#######")
