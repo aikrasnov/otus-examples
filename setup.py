@@ -26,7 +26,7 @@ setuptools.setup(
     # A boolean (True or False) flag specifying whether the project can be safely installed and run from a zip file. If this argument is not supplied, the bdist_egg command will have to analyze all of your project’s contents for possible problems each time it builds an egg.
     zip_safe=False,
     python_requires='>=3.6',
-    install_requires=["requests==2.23.0"]
+    install_requires=["requests==2.31.0"]
 )
 
 # sdist -- source distribution
